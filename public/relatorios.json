@@ -1,0 +1,25 @@
+{ 
+    "relatorios": [
+        {
+        "mes": "4/2024",
+        "volume": "1500",
+        "userID": "1",
+        "endereco": "Casa",
+        "descricao": "Relatório de água"
+        },
+        {
+        "mes": "4/2024",
+        "volume": "1500",
+        "userID": "1",
+        "endereco": "Casa",
+        "descricao": "Relatório de água"
+        },
+        {
+        "mes": "4/2024",
+        "volume": "1500",
+        "userID": "1",
+        "endereco": "Casa",
+        "descricao": "Relatório de água"
+        }
+    ]
+}

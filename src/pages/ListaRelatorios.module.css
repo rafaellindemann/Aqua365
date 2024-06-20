@@ -1,0 +1,12 @@
+.containerRelatorios{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+}
