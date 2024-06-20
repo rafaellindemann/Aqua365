@@ -11,19 +11,31 @@ body, html, #root{
   font-weight: 400;
 
   color-scheme: light dark;
-  color: var(--teal-and-mint-5);
-  background-color: var(--teal-and-mint-2);
+  color: var(--cor-5);
+  background-color: var(--cor-1);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --teal-and-mint-1: #C7FFED;
-  --teal-and-mint-2: #D8FFDB;
-  --teal-and-mint-3: #008F8C;
-  --teal-and-mint-4: #015958;
-  --teal-and-mint-5: #023535;
+  /* --cor-1: #C7FFED;
+  --cor-2: #D8FFDB;
+  --cor-3: #008F8C;
+  --cor-4: #015958;
+  --cor-5: #023535; */
+
+
+  --cor-5: #03045eff;
+  --cor-4a: #023e8aff;
+  --cor-4: #0077b6ff;
+  --cor-3a: #0096c7ff;
+  --cor-3: #00b4d8ff;
+  --cor-2a: #48cae4ff;
+  --cor-2: #90e0efff;
+  --cor-1a: #ade8f4ff;
+  --cor-1: #caf0f8ff;
+
 }
 
 a {

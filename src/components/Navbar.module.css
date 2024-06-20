@@ -2,9 +2,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
 }
 
 .p{
-    color: var(--teal-and-mint-3 );
+    color: var(--cor-4a );
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--cor-2);
+}
+
+.p:hover{
+    background-color: var(--cor-4a);
+    color: var(--cor-2 );
+
 }

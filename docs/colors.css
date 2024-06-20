@@ -1,20 +1,18 @@
 /* Color Theme Swatches in Hex */
-.Teal-and-Mint-1-hex { color: #C7FFED; }
+/* .Teal-and-Mint-1-hex { color: #C7FFED; }
 .Teal-and-Mint-2-hex { color: #D8FFDB; }
 .Teal-and-Mint-3-hex { color: #008F8C; }
 .Teal-and-Mint-4-hex { color: #015958; }
-.Teal-and-Mint-5-hex { color: #023535; }
+.Teal-and-Mint-5-hex { color: #023535; } */
 
-/* Color Theme Swatches in RGBA */
-.Teal-and-Mint-1-rgba { color: rgba(199, 255, 237, 1); }
-.Teal-and-Mint-2-rgba { color: rgba(216, 255, 219, 1); }
-.Teal-and-Mint-3-rgba { color: rgba(0, 143, 140, 1); }
-.Teal-and-Mint-4-rgba { color: rgba(1, 89, 88, 1); }
-.Teal-and-Mint-5-rgba { color: rgba(2, 53, 53, 1); }
 
-/* Color Theme Swatches in HSLA */
-.Teal-and-Mint-1-hsla { color: hsla(160, 100, 89, 1); }
-.Teal-and-Mint-2-hsla { color: hsla(124, 100, 92, 1); }
-.Teal-and-Mint-3-hsla { color: hsla(178, 100, 28, 1); }
-.Teal-and-Mint-4-hsla { color: hsla(179, 97, 17, 1); }
-.Teal-and-Mint-5-hsla { color: hsla(180, 92, 10, 1); }
+/* https://coolors.co/03045e-023e8a-0077b6-0096c7-00b4d8-48cae4-90e0ef-ade8f4-caf0f8 */
+/* --federal-blue: #03045eff;
+--marian-blue: #023e8aff;
+--honolulu-blue: #0077b6ff;
+--blue-green: #0096c7ff;
+--pacific-cyan: #00b4d8ff;
+--vivid-sky-blue: #48cae4ff;
+--non-photo-blue: #90e0efff;
+--non-photo-blue-2: #ade8f4ff;
+--light-cyan: #caf0f8ff; */

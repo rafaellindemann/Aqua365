@@ -10,7 +10,6 @@ function CardRelatorio({relatorio}) {
       <p>Volume: {relatorio.volume}m3</p>
       <p>Endereço: {relatorio.endereco}</p>
       <p>Descrição: {relatorio.descricao}</p>
-      <h2>card</h2>
     </div>
   )
 }
