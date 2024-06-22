@@ -12,7 +12,6 @@ function ListaRelatorios() {
         {relatorios.map((relatorio, index) => (
             <CardRelatorio relatorio={relatorio} key={index}/>
         ))}
-
       </div>
     </>
   )
