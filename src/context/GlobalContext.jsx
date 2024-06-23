@@ -17,54 +17,118 @@
  * 11 - [] - RECEBA OS DADOS GLOBAIS USANDO O useContext
  */
 
+
 import { createContext, useState, useEffect } from "react";
 import useFetch from "../hooks/useFetch";
 
 export const GlobalContext = createContext();
 
 export const GlobalContextProvider = ({ children }) => {
- const [dados, isLoading] = useFetch("/users.json");
- const [usuarios, setUsuarios] = useState([]);
- const [relatorios, setRelatorios] = useState(JSON.parse(
+  const [dados, isLoading] = useFetch("/users.json");
+  const [usuarios, setUsuarios] = useState([]);
+  const [relatorios, setRelatorios] = useState(JSON.parse(
     `[
-            {
-            "mes": "4/2024",
-            "volume": "1500",
-            "userID": "1",
-            "endereco": "Casa",
-            "descricao": "Relatório de água"
-            },
-            {
-            "mes": "5/2024",
-            "volume": "1000",
-            "userID": "1",
-            "endereco": "Casa",
-            "descricao": "Relatório de água"
-            },
-            {
-            "mes": "6/2024",
-            "volume": "900",
-            "userID": "1",
-            "endereco": "Casa",
-            "descricao": "Relatório de água"
-            }
-        ]`
-));
+        {
+          "mes": "4/2024",
+          "volume": "1500",
+          "userID": "1",
+          "endereco": "Casa",
+          "descricao": "Relatório de água"
+        },
+        {
+          "mes": "5/2024",
+          "volume": "1000",
+          "userID": "1",
+          "endereco": "Casa",
+          "descricao": "Relatório de água"
+        },
+        {
+          "mes": "6/2024",
+          "volume": "900",
+          "userID": "1",
+          "endereco": "Casa",
+          "descricao": "Relatório de água"
+        }
+    ]`
+  ));
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
- useEffect(() => {
-  if (!!dados && !isLoading) {
-   setUsuarios(dados.usuarios);
+  useEffect(() => {
+    if (!!dados && !isLoading) {
+      setUsuarios(dados.usuarios);
+    }
+  }, [dados]);
+
+  useEffect(() => {
+    console.log(usuarios);
+  }, [usuarios]);
+
+  function addUsuario(userData) {
+    setUsuarios((u) => [...u, userData]);
   }
- }, [dados]);
 
-
- function addUsuario(userData) {
-  setUsuarios((u) => [...u, userData]);
- }
-
- return (
-  <GlobalContext.Provider value={{ usuarios, setUsuarios, loadingUsuarios: isLoading, addUsuario, relatorios, setRelatorios }}>
-   {children}
-  </GlobalContext.Provider>
- );
+  return (
+    <GlobalContext.Provider value={{ usuarios, setUsuarios, loadingUsuarios: isLoading, addUsuario, relatorios, setRelatorios, isLoggedIn, setIsLoggedIn }}>
+      {children}
+    </GlobalContext.Provider>
+  );
 };
+
+
+
+
+// import { createContext, useState, useEffect } from "react";
+// import useFetch from "../hooks/useFetch";
+
+// export const GlobalContext = createContext();
+
+// export const GlobalContextProvider = ({ children }) => {
+//  const [dados, isLoading] = useFetch("/users.json");
+//  const [usuarios, setUsuarios] = useState([]);
+//  const [relatorios, setRelatorios] = useState(JSON.parse(
+//     `[
+//             {
+//             "mes": "4/2024",
+//             "volume": "1500",
+//             "userID": "1",
+//             "endereco": "Casa",
+//             "descricao": "Relatório de água"
+//             },
+//             {
+//             "mes": "5/2024",
+//             "volume": "1000",
+//             "userID": "1",
+//             "endereco": "Casa",
+//             "descricao": "Relatório de água"
+//             },
+//             {
+//             "mes": "6/2024",
+//             "volume": "900",
+//             "userID": "1",
+//             "endereco": "Casa",
+//             "descricao": "Relatório de água"
+//             }
+//         ]`
+// ));
+
+//  useEffect(() => {
+//   if (!!dados && !isLoading) {
+//    setUsuarios(dados.usuarios);
+//   }
+//  }, [dados]);
+
+//  useEffect(() => {
+//   console.log(usuarios);
+//  }, [usuarios]);
+
+
+//  function addUsuario(userData) {
+//   setUsuarios((u) => [...u, userData]);
+//  }
+
+//  return (
+//   <GlobalContext.Provider value={{ usuarios, setUsuarios, loadingUsuarios: isLoading, addUsuario, relatorios, setRelatorios }}>
+//    {children}
+//   </GlobalContext.Provider>
+//  );
+// };

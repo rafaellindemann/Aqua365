@@ -5,7 +5,6 @@ function CardRelatorio({relatorio}) {
 
   return (
     <div className={styles.containerCard}>
-        {console.log("card")}
       <h2>{relatorio.mes}</h2>
       <p>Volume: {relatorio.volume}m3</p>
       <p>Endereço: {relatorio.endereco}</p>
@@ -14,10 +13,11 @@ function CardRelatorio({relatorio}) {
   )
 }
 
+export default CardRelatorio
+
 // "mes": "4/2024",
 // "volume": "1500",
 // "userID": "1",
 // "endereco": "Casa",
 // "descricao": "Relatório de água"
 
-export default CardRelatorio
