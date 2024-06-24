@@ -1,14 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
+import styles from './FormCadastro.module.css';
 
 function FormCadastro({ switchToLogin }) {
   const { register, handleSubmit, formState: { errors }, setValue, getValues } = useForm();
-  const { addUsuario } = useContext(GlobalContext);
+  const { usuarios, addUsuario } = useContext(GlobalContext);
   const [cepLoading, setCepLoading] = useState(false);
 
   const onSubmit = data => {
+    // Verificar se o CPF já existe
+    const cpfExistente = usuarios.find(user => user.cpf === data.cpf);
+    if (cpfExistente) {
+      alert("CPF já cadastrado. Por favor, use outro CPF.");
+      return;
+    }
+
     // Adicionar o novo usuário
     const novoUsuario = {
       ...data,
@@ -25,7 +32,7 @@ function FormCadastro({ switchToLogin }) {
     };
     addUsuario(novoUsuario);
     alert("Usuário cadastrado com sucesso!");
-    console.log(novoUsuario);
+    switchToLogin();
   };
 
   const buscarEndereco = async () => {
@@ -55,59 +62,61 @@ function FormCadastro({ switchToLogin }) {
   };
 
   return (
-    <div>
-      <h1>Cadastro</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="text" placeholder="Nome" {...register("nome", { required: true })} />
-        {errors.nome && <p>Nome é obrigatório</p>}
+    <div className={styles.container}>
+      <div className={styles.formWrapper}>
+        <h1>Cadastro</h1>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <input type="text" placeholder="Nome" {...register("nome", { required: true })} />
+          {errors.nome && <p>Nome é obrigatório</p>}
 
-        <select {...register("sexo", { required: true })}>
-          <option value="">Selecione o sexo</option>
-          <option value="Masculino">Masculino</option>
-          <option value="Feminino">Feminino</option>
-          <option value="Outro">Outro</option>
-        </select>
-        {errors.sexo && <p>Sexo é obrigatório</p>}
+          <select {...register("sexo", { required: true })}>
+            <option value="">Selecione o sexo</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Outro">Outro</option>
+          </select>
+          {errors.sexo && <p>Sexo é obrigatório</p>}
 
-        <input type="text" placeholder="CPF" {...register("cpf", { required: true })} />
-        {errors.cpf && <p>CPF é obrigatório</p>}
+          <input type="text" placeholder="CPF (XXX.XXX.XXX-XX)" {...register("cpf", { required: true, pattern: /^\d{3}\.\d{3}\.\d{3}-\d{2}$/ })} />
+          {errors.cpf && <p>CPF inválido ou já cadastrado</p>}
 
-        <input type="date" placeholder="Data de Nascimento" {...register("data_nasc", { required: true })} />
-        {errors.data_nasc && <p>Data de Nascimento é obrigatória</p>}
+          <input type="date" placeholder="Data de Nascimento" {...register("data_nasc", { required: true })} />
+          {errors.data_nasc && <p>Data de Nascimento é obrigatória</p>}
 
-        <input type="text" placeholder="Email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
-        {errors.email && <p>Email inválido</p>}
+          <input type="text" placeholder="Email" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
+          {errors.email && <p>Email inválido</p>}
 
-        <input type="password" placeholder="Senha" {...register("senha", { required: true })} />
-        {errors.senha && <p>Senha é obrigatória</p>}
+          <input type="password" placeholder="Senha" {...register("senha", { required: true })} />
+          {errors.senha && <p>Senha é obrigatória</p>}
 
-        <div>
-          <input type="text" placeholder="CEP" {...register("CEP", { required: true })} />
-          <button type="button" onClick={buscarEndereco} disabled={cepLoading}>
-            {cepLoading ? 'Buscando...' : 'Buscar CEP'}
-          </button>
-          {errors.CEP && <p>CEP é obrigatório</p>}
-        </div>
+          <div className={styles.cepContainer}>
+            <input type="text" placeholder="CEP" {...register("CEP", { required: true })} />
+            <button type="button" onClick={buscarEndereco} disabled={cepLoading}>
+              {cepLoading ? 'Buscando...' : 'Buscar CEP'}
+            </button>
+            {errors.CEP && <p>CEP é obrigatório</p>}
+          </div>
 
-        <input type="text" placeholder="Logradouro" {...register("Logradouro", { required: true })} />
-        {errors.Logradouro && <p>Logradouro é obrigatório</p>}
+          <input type="text" placeholder="Logradouro" {...register("Logradouro", { required: true })} />
+          {errors.Logradouro && <p>Logradouro é obrigatório</p>}
 
-        <input type="text" placeholder="Complemento" {...register("Complemento")} />
+          <input type="text" placeholder="Complemento" {...register("Complemento")} />
 
-        <input type="text" placeholder="Unidade" {...register("Unidade")} />
+          <input type="text" placeholder="Unidade" {...register("Unidade")} />
 
-        <input type="text" placeholder="Bairro" {...register("Bairro", { required: true })} />
-        {errors.Bairro && <p>Bairro é obrigatório</p>}
+          <input type="text" placeholder="Bairro" {...register("Bairro", { required: true })} />
+          {errors.Bairro && <p>Bairro é obrigatório</p>}
 
-        <input type="text" placeholder="Localidade" {...register("Localidade", { required: true })} />
-        {errors.Localidade && <p>Localidade é obrigatória</p>}
+          <input type="text" placeholder="Localidade" {...register("Localidade", { required: true })} />
+          {errors.Localidade && <p>Localidade é obrigatória</p>}
 
-        <input type="text" placeholder="UF" {...register("UF", { required: true })} />
-        {errors.UF && <p>UF é obrigatória</p>}
+          <input type="text" placeholder="UF" {...register("UF", { required: true })} />
+          {errors.UF && <p>UF é obrigatória</p>}
 
-        <input type="submit" />
-      </form>
-      <button onClick={switchToLogin}>Já tem uma conta? Faça login</button>
+          <input type="submit" value="Cadastrar" />
+        </form>
+        <button onClick={switchToLogin}>Já tem uma conta? Faça login</button>
+      </div>
     </div>
   );
 }
