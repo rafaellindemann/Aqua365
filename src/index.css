@@ -26,6 +26,7 @@ body, html, #root{
   --cor-5: #023535; */
 
 
+
   --cor-5: #03045eff;
   --cor-4a: #023e8aff;
   --cor-4: #0077b6ff;
@@ -35,6 +36,7 @@ body, html, #root{
   --cor-2: #90e0efff;
   --cor-1a: #ade8f4ff;
   --cor-1: #caf0f8ff;
+  --label-bg: var(--cor-1);
 
 }
 

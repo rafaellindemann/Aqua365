@@ -6,9 +6,9 @@ function CardRelatorio({relatorio}) {
   return (
     <div className={styles.containerCard}>
       <h2>{relatorio.mes}</h2>
-      <p>Volume: {relatorio.volume}m3</p>
-      <p>Endereço: {relatorio.endereco}</p>
-      <p>Descrição: {relatorio.descricao}</p>
+      <p className={styles.pRel}>Volume: {relatorio.volume}m3</p>
+      <p className={styles.pRel}>Endereço: {relatorio.endereco}</p>
+      <p className={styles.pRel}>Descrição: {relatorio.descricao}</p>
     </div>
   )
 }

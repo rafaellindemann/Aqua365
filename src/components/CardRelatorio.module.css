@@ -11,3 +11,7 @@
     justify-content: flex-start;
     align-items: center;
 }
+
+.pRel{
+    color: var(--cor-5);
+}

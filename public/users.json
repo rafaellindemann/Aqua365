@@ -179,6 +179,24 @@
 				"localidade": "Florianópolis",
 				"uf": "SC"
 			}
+		},
+		{
+			"nome": "D M G Silva",
+			"id": 10,
+			"sexo": "Masculino",
+			"cpf": "503.474.747-21",
+			"data_nasc": "07/01/2003",
+			"email": "1@1",
+			"senha": "1",
+			"endereco": {
+				"cep": "88040-000",
+				"logradouro": "Rua Bocaiúva",
+				"complemento": "",
+				"unidade": "1001",
+				"bairro": "Centro",
+				"localidade": "Florianópolis",
+				"uf": "SC"
+			}
 		}
 	]
 }
