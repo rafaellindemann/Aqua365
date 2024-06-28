@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { GlobalContext } from '../context/GlobalContext';
@@ -6,19 +6,30 @@ import styles from './FormLogin.module.css';
 
 function FormLogin() {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const { usuarios, setIsLoggedIn, setLoggedUser } = useContext(GlobalContext);
+  const { usuarios, setIsLoggedIn, setLoggedUser, loggedUser, isLoggedIn } = useContext(GlobalContext);
   const navigate = useNavigate();
+  let user;
 
   const onSubmit = data => {
-    const user = usuarios.find(u => u.email === data.email && u.senha === data.senha);
-    if (user) {
+    user = usuarios.find(u => u.email === data.email && u.senha === data.senha);
+    if (!!user) {
       setIsLoggedIn(true);
       setLoggedUser(user);
+      console.log(loggedUser);
+      console.log(isLoggedIn);
       navigate('/');
     } else {
       alert('Email ou senha incorretos');
     }
   };
+  
+  // useEffect(() => {
+  //   console.log(loggedUser);
+  //   if(!!loggedUser){
+  //     navigate('/');
+      
+  //   }
+  // }, [loggedUser])
 
   return (
     <div className={styles.container}>

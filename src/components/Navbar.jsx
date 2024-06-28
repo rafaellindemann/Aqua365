@@ -6,6 +6,11 @@ import styles from './Navbar.module.css';
 function Navbar() {
   const { isLoggedIn, loggedUser, setIsLoggedIn, setLoggedUser } = useContext(GlobalContext);
 
+  function test(){
+    console.log(isLoggedIn)
+    console.log(loggedUser)
+  }
+
   const handleLogout = () => {
     setIsLoggedIn(false);
     setLoggedUser(null);
@@ -21,8 +26,7 @@ function Navbar() {
       ) : (
         <Link to="/login"><p className={styles.p}>Login</p></Link>
       )}
-      {console.log(isLoggedIn)}
-      {console.log(loggedUser)}
+      <button onClick={test}>Test</button>
     </nav>
   );
 }
