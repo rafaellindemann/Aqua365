@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .formWrapper {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .inputContainer {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+  }
+  
+  .inputContainer input,
+  .cepContainer input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .inputContainer label,
+  .cepContainer label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    padding: 0 5px;
+    color: #888;
+  }
+  
+  .cepContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cepContainer button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cepContainer button[disabled] {
+    background-color: #ccc;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button[type="submit"],
+  button[type="button"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover,
+  button[type="button"]:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  

@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .formWrapper {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* width: 400px; */
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .inputContainer {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+  }
+  
+  .inputContainer input,
+  .cepContainer input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .inputContainer label,
+  .cepContainer label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    padding: 0 5px;
+    color: #888;
+  }
+  
+  .inputContainer p,
+  .cepContainer p {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .cepContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cepContainer button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cepContainer button[disabled] {
+    background-color: #ccc;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: var(--cor-4);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: var(--cor-4a);
+  }
+  
+  input[type="number"], input[type="month"] {
+    background-color: var(--cor-1);
+    color: var(--cor-4);
+  }
+  

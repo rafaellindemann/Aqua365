@@ -1,4 +1,3 @@
-
 import { createContext, useState, useEffect } from "react";
 import useFetch from "../hooks/useFetch";
 
@@ -10,24 +9,51 @@ export const GlobalContextProvider = ({ children }) => {
   const [relatorios, setRelatorios] = useState(JSON.parse(
     `[
         {
-          "mes": "4/2024",
+          "id": 1719692774402,
+          "mes": "2024-04",
           "volume": "1500",
-          "userID": "1",
-          "endereco": "Casa",
+          "userID": 1,
+          "endereco": {
+            "cep": "88058-100",
+            "logradouro": "Rua Intendente João Nunes Vieira",
+            "complemento": "Apartamento 201",
+            "unidade": "1011",
+            "bairro": "Ingleses do Rio Vermelho",
+            "localidade": "Florianópolis",
+            "uf": "SC"
+          },
           "descricao": "Relatório de água"
         },
         {
-          "mes": "5/2024",
+          "id": 1719692774426,
+          "mes": "2024-05",
           "volume": "1000",
-          "userID": "1",
-          "endereco": "Casa",
+          "userID": 1,
+          "endereco": {
+            "cep": "88058-100",
+            "logradouro": "Rua Intendente João Nunes Vieira",
+            "complemento": "Apartamento 201",
+            "unidade": "1011",
+            "bairro": "Ingleses do Rio Vermelho",
+            "localidade": "Florianópolis",
+            "uf": "SC"
+          },
           "descricao": "Relatório de água"
         },
         {
-          "mes": "6/2024",
+          "id": 1719692774475,
+          "mes": "2024-06",
           "volume": "900",
-          "userID": "1",
-          "endereco": "Casa",
+          "userID": 1,
+          "endereco": {
+            "cep": "88058-100",
+            "logradouro": "Rua Intendente João Nunes Vieira",
+            "complemento": "Apartamento 201",
+            "unidade": "1011",
+            "bairro": "Ingleses do Rio Vermelho",
+            "localidade": "Florianópolis",
+            "uf": "SC"
+          },
           "descricao": "Relatório de água"
         }
     ]`
@@ -36,28 +62,32 @@ export const GlobalContextProvider = ({ children }) => {
   const [loggedUser, setLoggedUser] = useState(null);
 
   useEffect(() => {
-    if (dados && !isLoading) {
+    if (!!dados && !isLoading) {
       setUsuarios(dados.usuarios);
     }
-  }, [dados, isLoading]);
+  }, [dados]);
 
-    function addUsuario(userData) {
+  function addUsuario(userData) {
     setUsuarios((u) => [...u, userData]);
   }
 
+  function addRelatorio(relatorio) {
+    setRelatorios((r) => [...r, relatorio]);
+  }
 
   return (
     <GlobalContext.Provider value={{ 
       usuarios, 
       setUsuarios, 
       loadingUsuarios: isLoading, 
+      addUsuario, 
       relatorios, 
       setRelatorios, 
       isLoggedIn, 
       setIsLoggedIn,
       loggedUser,
       setLoggedUser,
-      addUsuario
+      addRelatorio
     }}>
       {children}
     </GlobalContext.Provider>

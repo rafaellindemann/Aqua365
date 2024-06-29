@@ -3,10 +3,11 @@ import { createBrowserRouter } from "react-router-dom";
 import Login from "../pages/Login";
 import App from "../App";
 import Dashboard from "../pages/Dashboard";
-import ListaRelatorios from "../pages/ListaRelatorios";
-import CadastroRelatorio from "../pages/CadastroRelatorio";
 import GlobalProviderWrapper from '../components/GlobalProviderWrapper';
 import ProtectedRoute from '../components/ProtectedRoute';
+import CadastroRelatorio from '../pages/CadastroRelatorio';
+import ListaRelatorios from '../pages/ListaRelatorios';
+import EditarRelatorio from '../pages/EditarRelatorio';
 
 const router = createBrowserRouter([
   { 
@@ -29,13 +30,17 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
-        path: "/cadastro",
-        element: <CadastroRelatorio />,
+        path: 'cadastro-relatorio',
+        element: <CadastroRelatorio />
       },
       {
-        path: "/lista",
-        element: <ListaRelatorios />,
-      }
+        path: 'lista-relatorios',
+        element: <ListaRelatorios />
+      },
+      {
+        path: 'editar-relatorio',
+        element: <EditarRelatorio />
+      },
     ]
   },
   {
