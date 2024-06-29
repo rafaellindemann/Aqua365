@@ -7,9 +7,7 @@ function Dashboard() {
     <div>
       <h1>Dashboard</h1>
       <div>
-        {/* {relatorios.map((relatorio, index) => (
-            <CardRelatorio relatorio={relatorio} key={index}/>
-        ))} */}
+
 
       </div>
     </div>
