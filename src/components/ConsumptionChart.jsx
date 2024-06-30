@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 import { GlobalContext } from '../context/GlobalContext';
+import styles from './ConsumptionChart.module.css';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
@@ -14,7 +15,7 @@ function ConsumptionChart() {
   const data = sortedRelatorios.map(rel => rel.volume);
 
   let maxVolume = Math.max(...data);
-  maxVolume = parseInt((maxVolume+10)/10)*10 // gambi pra setar o eixo no próximo múltiplo de 10
+  maxVolume = parseInt((maxVolume + 10) / 10) * 10; // gambi pra setar o eixo no próximo múltiplo de 10
 
   const chartData = {
     labels,
@@ -34,7 +35,7 @@ function ConsumptionChart() {
       y: {
         beginAtZero: true,
         min: 0,
-        max: maxVolume, 
+        max: maxVolume,
         title: {
           display: true,
           text: 'Volume de Consumo'
@@ -59,8 +60,11 @@ function ConsumptionChart() {
     },
   };
 
-  return <Line data={chartData} options={options} />;
+  return (
+    <div className={styles.chartWrapper}>
+      <Line data={chartData} options={options} width={600} height={400} />
+    </div>
+  );
 }
 
 export default ConsumptionChart;
-

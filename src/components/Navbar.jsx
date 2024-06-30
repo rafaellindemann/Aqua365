@@ -24,7 +24,10 @@ function Navbar() {
       <Link to="/cadastro-relatorio"><p className={styles.p}>Cadastrar Relatório</p></Link>
       <Link to="/lista-relatorios"><p className={styles.p}>Lista de Relatórios</p></Link>
       {isLoggedIn ? (
-        <p className={styles.p} onClick={handleLogout}>Logout</p>
+        <>
+          <Link to="/perfil"><p className={styles.p}>Perfil</p></Link>
+          <p className={styles.p} onClick={handleLogout}>Logout</p>
+        </>
       ) : (
         <Link to="/login"><p className={styles.p}>Login</p></Link>
       )}

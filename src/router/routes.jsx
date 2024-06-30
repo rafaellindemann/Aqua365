@@ -8,6 +8,7 @@ import ProtectedRoute from '../components/ProtectedRoute';
 import CadastroRelatorio from '../pages/CadastroRelatorio';
 import ListaRelatorios from '../pages/ListaRelatorios';
 import EditarRelatorio from '../pages/EditarRelatorio';
+import Profile from '../pages/Profile';
 
 const router = createBrowserRouter([
   { 
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
         path: 'editar-relatorio',
         element: <EditarRelatorio />
       },
+      {
+        path: 'perfil',
+        element: <Profile />
+      },
     ]
   },
   {
@@ -54,3 +59,4 @@ const router = createBrowserRouter([
 ]);
 
 export default router;
+

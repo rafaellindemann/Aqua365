@@ -139,6 +139,11 @@ export const GlobalContextProvider = ({ children }) => {
     setRelatorios((r) => [...r, relatorio]);
   }
 
+  const updateUser = (updatedUser) => {
+    setUsuarios(usuarios.map(user => (user.id === updatedUser.id ? updatedUser : user)));
+    setLoggedUser(updatedUser);
+  };
+
   return (
     <GlobalContext.Provider value={{ 
       usuarios, 
@@ -151,7 +156,8 @@ export const GlobalContextProvider = ({ children }) => {
       setIsLoggedIn,
       loggedUser,
       setLoggedUser,
-      addRelatorio
+      addRelatorio,
+      updateUser
     }}>
       {children}
     </GlobalContext.Provider>

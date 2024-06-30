@@ -86,7 +86,7 @@ button {
   color: var(--cor-4);
   cursor: pointer;
   text-align: center;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
 }
 
 button:hover {
