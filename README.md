@@ -18,3 +18,8 @@ React Hook Form
 ```
 npm install react-hook-form
 ```
+
+Instalação do Chart.js e do adaptador React-Chartjs-2
+```
+npm install chart.js react-chartjs-2
+```
