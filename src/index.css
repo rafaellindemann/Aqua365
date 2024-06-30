@@ -12,7 +12,9 @@ body, html, #root{
 
   color-scheme: light dark;
   color: var(--cor-5);
-  background-color: var(--cor-1);
+  /* background-color: var(--cor-1); */
+  background: rgb(144,224,239);
+  background: linear-gradient(90deg, rgba(144,224,239,1) 0%, rgba(2,62,138,1) 100%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
