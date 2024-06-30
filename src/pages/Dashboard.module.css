@@ -4,12 +4,15 @@
   
   .cards {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 20px;
+    gap: 20px;
   }
   
   .card {
-    background-color: #fff;
+    background-color: var(--cor-1);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -23,18 +26,24 @@
   
   .relatorios {
     margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
   }
   
-  .relatorios h2 {
-    margin-bottom: 20px;
+  .subtitulo {
+    text-align: center;
+    margin-top: 40px;
   }
   
   .cardRelatorio {
-    background-color: #fff;
+    background-color: var(--cor-1);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
+    max-width: 300px;
   }
   
   .cardRelatorio p {

@@ -31,7 +31,7 @@ function Navbar() {
       ) : (
         <Link to="/login"><p className={styles.p}>Login</p></Link>
       )}
-      <button onClick={test}>Test</button>
+      {/* <button onClick={test}>Test</button> */}
     </nav>
   );
 }

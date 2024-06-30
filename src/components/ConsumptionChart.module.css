@@ -1,6 +1,7 @@
 .chartWrapper {
     width: 100%;
-    max-width: 800px; /* Define a largura máxima do gráfico */
-    margin: 0 auto; /* Centraliza o gráfico horizontalmente */
+    max-width: 800px;
+    margin: 0 auto; 
+    background-color: var(--cor-2);
   }
   

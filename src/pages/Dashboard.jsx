@@ -27,8 +27,8 @@ function Dashboard() {
           <p className={styles.text}>{totalRelatoriosUsuario}</p>
         </div>
       </div>
+        <h2 className={styles.subtitulo}>Seus Relatórios</h2>
       <div className={styles.relatorios}>
-        <h2>Seus Relatórios</h2>
         {userRelatorios.length === 0 ? (
           <p className={styles.text}>Nenhum relatório encontrado.</p>
         ) : (
@@ -43,7 +43,7 @@ function Dashboard() {
         )}
       </div>
       <div className={styles.chartContainer}>
-        <h2>Progresso do Consumo de Água</h2>
+        <h2 className={styles.subtitulo}>Progresso do Consumo de Água</h2>
         <ConsumptionChart />
       </div>
     </div>
