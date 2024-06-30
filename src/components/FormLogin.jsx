@@ -26,13 +26,13 @@ function FormLogin({ switchToCadastro }) {
         <h1>Login</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.inputContainer}>
-            <input type="text" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
             <label>Email</label>
+            <input type="text" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
             {errors.email && <p>Email inválido</p>}
           </div>
           <div className={styles.inputContainer}>
-            <input type="password" {...register("senha", { required: true })} />
             <label>Senha</label>
+            <input type="password" {...register("senha", { required: true })} />
             {errors.senha && <p>Senha é obrigatória</p>}
           </div>
           <input type="submit" value="Login" />

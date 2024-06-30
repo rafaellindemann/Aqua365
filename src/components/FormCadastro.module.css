@@ -44,7 +44,7 @@ select {
   outline: none;
 }
 
-label {
+/* label {
   position: absolute;
   top: 50%;
   left: 0.75rem;
@@ -62,7 +62,7 @@ input:not(:placeholder-shown) + label {
   transform: translateY(-100%);
   font-size: 0.75rem;
   color: var(--cor-4a);
-}
+} */
 
 input[type="submit"],
 button[type="button"] {
