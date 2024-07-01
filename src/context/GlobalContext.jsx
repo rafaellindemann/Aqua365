@@ -4,7 +4,7 @@ import useFetch from "../hooks/useFetch";
 export const GlobalContext = createContext();
 
 export const GlobalContextProvider = ({ children }) => {
-  const [dados, isLoading] = useFetch("/users.json");
+  const [dados, isLoading] = useFetch("/dados.json");
   const [usuarios, setUsuarios] = useState([]);
   const [relatorios, setRelatorios] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
