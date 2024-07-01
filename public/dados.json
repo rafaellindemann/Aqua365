@@ -312,5 +312,27 @@
 			},
 			"descricao": "Relatório de água"
 		}
-	]
+	],
+	"dicas": [
+		"Feche a torneira enquanto escova os dentes.",
+		"Tome banhos mais curtos.",
+		"Conserte vazamentos imediatamente.",
+		"Use um balde para lavar o carro em vez de uma mangueira.",
+		"Reutilize a água da chuva para regar as plantas.",
+		"Instale aeradores nas torneiras.",
+		"Use a máquina de lavar roupas e louças apenas quando estiverem cheias.",
+		"Evite lavar calçadas com mangueira.",
+		"Regue o jardim de manhã cedo ou à noite para evitar a evaporação.",
+		"Use um regador em vez de uma mangueira para molhar as plantas.",
+		"Troque a descarga convencional por uma de baixo consumo.",
+		"Instale chuveiros de baixa vazão.",
+		"Não jogue óleo ou resíduos na pia.",
+		"Desligue a água enquanto ensaboa as mãos.",
+		"Use vassoura para limpar calçadas e quintais.",
+		"Colete e reutilize a água do ar condicionado.",
+		"Cubra piscinas quando não estiverem em uso para evitar a evaporação.",
+		"Adote plantas nativas que precisam de menos água.",
+		"Use uma bacia para lavar frutas e vegetais em vez de água corrente.",
+		"Monitore o consumo de água com regularidade."
+	  ]
 }

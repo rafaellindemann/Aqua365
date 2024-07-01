@@ -7,6 +7,7 @@ export const GlobalContextProvider = ({ children }) => {
   const [dados, isLoading] = useFetch("/dados.json");
   const [usuarios, setUsuarios] = useState([]);
   const [relatorios, setRelatorios] = useState([]);
+  const [dicas, setDicas] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loggedUser, setLoggedUser] = useState(null);
 
@@ -14,6 +15,7 @@ export const GlobalContextProvider = ({ children }) => {
     if (!!dados && !isLoading) {
       setUsuarios(dados.usuarios);
       setRelatorios(dados.relatorios);
+      setDicas(dados.dicas);
     }
   }, [dados]);
 
@@ -43,7 +45,8 @@ export const GlobalContextProvider = ({ children }) => {
       loggedUser,
       setLoggedUser,
       addRelatorio,
-      updateUser
+      updateUser,
+      dicas
     }}>
       {children}
     </GlobalContext.Provider>

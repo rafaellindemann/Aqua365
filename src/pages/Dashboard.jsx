@@ -1,15 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
 import styles from './Dashboard.module.css';
 import ConsumptionChart from '../components/ConsumptionChart';
 
 function Dashboard() {
-  const { usuarios, relatorios, loggedUser } = useContext(GlobalContext);
+  const { usuarios, relatorios, loggedUser, dicas } = useContext(GlobalContext);
+  const [dicaDoDia, setDicaDoDia] = useState('');
 
   const totalUsuarios = usuarios.length;
   const totalRelatorios = relatorios.length;
   const userRelatorios = relatorios.filter(rel => rel.userID === loggedUser.id);
   const totalRelatoriosUsuario = userRelatorios.length;
+
+  useEffect(()=>{
+    const dica = dicas[Math.floor(Math.random() * dicas.length)];
+    setDicaDoDia(dica);
+  },[])
 
   return (
     <div className={styles.container}>
@@ -46,6 +52,12 @@ function Dashboard() {
         <h2 className={styles.subtitulo}>Progresso do Consumo de Água</h2>
         <ConsumptionChart />
       </div>
+      {!!dicaDoDia && (
+        <div className={styles.dica}>
+          <h2 className={styles.subtitulo}>Dica do Dia</h2>
+          <p className={styles.dicaText}>{dicaDoDia}</p>
+        </div>
+      )}
     </div>
   );
 }
