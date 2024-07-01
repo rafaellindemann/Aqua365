@@ -25,14 +25,14 @@
   
   button {
     padding: 5px 10px;
-    /* margin-left: 10px; */
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 50%;
   }
   
   button:hover {
-    background-color: #ddd;
+    background-color: var(--cor-2a);
   }
 
   .text{

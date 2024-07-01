@@ -44,6 +44,10 @@ select {
   outline: none;
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
 
 input[type="submit"],
 button[type="button"] {
@@ -74,11 +78,11 @@ button:hover {
   text-decoration: underline;
 }
 
-/* p {
+.pErro {
   color: red;
   font-size: 0.9rem;
   margin: 0;
-} */
+}
 
 .cepContainer {
   display: flex;
@@ -86,3 +90,15 @@ button:hover {
   align-items: center;
 }
 
+.switchButton {
+  background: none;
+  border: none;
+  color: var(--cor-4);
+  cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.switchButton:hover {
+  text-decoration: underline;
+}

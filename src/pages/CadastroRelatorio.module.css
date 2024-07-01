@@ -1,5 +1,15 @@
 .container {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--cor-2a);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -8,7 +18,7 @@
     background-color: var(--cor-2a);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     /* width: 400px; */
   }
   

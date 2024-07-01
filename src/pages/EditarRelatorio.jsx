@@ -65,50 +65,53 @@ function EditarRelatorio() {
         <h1>Editar Relatório</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.inputContainer}>
-            <input type="month" defaultValue={relatorio.mes} {...register("mes", { required: true })} />
             <label>Mês</label>
+            <input type="month" defaultValue={relatorio.mes} {...register("mes", { required: true })} />
           </div>
           <div className={styles.inputContainer}>
-            <input type="number" defaultValue={relatorio.volume} {...register("volume", { required: true })} />
             <label>Volume</label>
+            <input type="number" defaultValue={relatorio.volume} {...register("volume", { required: true })} />
           </div>
           <div className={styles.inputContainer}>
-            <input type="text" defaultValue={relatorio.descricao} {...register("descricao", { required: true })} />
             <label>Descrição</label>
+            <input type="text" defaultValue={relatorio.descricao} {...register("descricao", { required: true })} />
           </div>
+          <div className={styles.inputContainer}>
+            <label>CEP</label>
           <div className={styles.cepContainer}>
             <input type="text" defaultValue={relatorio.endereco.cep} {...register("CEP", { required: true })} />
             <button type="button" onClick={buscarEndereco} disabled={cepLoading}>
               {cepLoading ? 'Buscando...' : 'Buscar CEP'}
             </button>
           </div>
+          </div>
           <div className={styles.inputContainer}>
-            <input type="text" defaultValue={relatorio.endereco.logradouro} {...register("Logradouro", { required: true })} />
             <label>Logradouro</label>
+            <input type="text" defaultValue={relatorio.endereco.logradouro} {...register("Logradouro", { required: true })} />
           </div>
           <div className={styles.inputContainer}>
-            <input type="text" defaultValue={relatorio.endereco.complemento} {...register("Complemento")} />
             <label>Complemento</label>
+            <input type="text" defaultValue={relatorio.endereco.complemento} {...register("Complemento")} />
           </div>
           <div className={styles.inputContainer}>
-            <input type="text" defaultValue={relatorio.endereco.unidade} {...register("Unidade")} />
             <label>Unidade</label>
+            <input type="text" defaultValue={relatorio.endereco.unidade} {...register("Unidade")} />
           </div>
           <div className={styles.inputContainer}>
-            <input type="text" defaultValue={relatorio.endereco.bairro} {...register("Bairro", { required: true })} />
             <label>Bairro</label>
+            <input type="text" defaultValue={relatorio.endereco.bairro} {...register("Bairro", { required: true })} />
           </div>
           <div className={styles.inputContainer}>
-            <input type="text" defaultValue={relatorio.endereco.localidade} {...register("Localidade", { required: true })} />
             <label>Localidade</label>
+            <input type="text" defaultValue={relatorio.endereco.localidade} {...register("Localidade", { required: true })} />
           </div>
           <div className={styles.inputContainer}>
-            <input type="text" defaultValue={relatorio.endereco.uf} {...register("UF", { required: true })} />
             <label>UF</label>
+            <input type="text" defaultValue={relatorio.endereco.uf} {...register("UF", { required: true })} />
           </div>
           <div className={styles.buttonContainer}>
-            <button type="submit">Salvar</button>
             <button type="button" onClick={() => navigate('/lista-relatorios')}>Cancelar</button>
+            <button type="submit">Salvar</button>
           </div>
         </form>
       </div>

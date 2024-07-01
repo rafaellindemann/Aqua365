@@ -48,26 +48,6 @@ form {
   border-color: var(--cor-4);
 }
 
-/* .label {
-  position: absolute;
-  left: 0.8rem;
-  top: 0.8rem;
-  background: var(--label-bg);
-  padding: 0 0.2rem;
-  color: var(--cor-4);
-  font-size: 1rem;
-  transition: all 0.2s ease;
-  pointer-events: none;
-} */
-
-/* .input:focus + .label,
-.input:not(:placeholder-shown) + .label {
-  top: -0.6rem;
-  left: 0.6rem;
-  font-size: 0.8rem;
-  color: var(--cor-4);
-  background: var(--label-bg);
-} */
 
 .inputError {
   border-color: red;
