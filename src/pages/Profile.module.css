@@ -23,29 +23,36 @@
   }
   
   .inputContainer {
-    position: relative;
-    margin-bottom: 20px;
+    /* position: relative; */
+    /* margin-bottom: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .inputContainer label {
-    position: absolute;
-    top: -13px;
     left: 10px;
-    background-color:  var(--cor-2a);
     padding: 0 5px;
     color: var(--cor-5);
   }
   
   .inputContainer input {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: 1px solid var(--cor-3);
     border-radius: 5px;
     outline: none;
   }
   
+  input[type="email"]{
+    background-color: var(--cor-1);
+    color: var(--cor-4);
+  }
+
   .cepContainer {
     display: flex;
+    justify-content: center;
     align-items: center;
   }
   
@@ -84,10 +91,10 @@
     background-color: var(--cor-2);
   }
   
-  p {
+  /* p {
     color: red;
     font-size: 12px;
-  }
+  } */
   
   .deleteButton {
     background-color: var(--cor-4a);

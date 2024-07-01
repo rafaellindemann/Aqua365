@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { GlobalContext } from '../context/GlobalContext';
-import styles from './FormLogin.module.css';
+import styleFormLogin from './FormLogin.module.css';
 
 function FormLogin({ switchToCadastro }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -21,23 +21,23 @@ function FormLogin({ switchToCadastro }) {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.formWrapper}>
+    <div className={styleFormLogin.container}>
+      <div className={styleFormLogin.formWrapper}>
         <h1>Login</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className={styles.inputContainer}>
+          <div className={styleFormLogin.inputContainer}>
             <label>Email</label>
             <input type="text" {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
             {errors.email && <p>Email inválido</p>}
           </div>
-          <div className={styles.inputContainer}>
+          <div className={styleFormLogin.inputContainer}>
             <label>Senha</label>
             <input type="password" {...register("senha", { required: true })} />
             {errors.senha && <p>Senha é obrigatória</p>}
           </div>
           <input type="submit" value="Login" />
         </form>
-        <p className={styles.switch} onClick={switchToCadastro}>Não tem uma conta? Cadastre-se</p>
+        <p className={styleFormLogin.switchButton} onClick={switchToCadastro}>Não tem uma conta? Cadastre-se</p>
       </div>
     </div>
   );

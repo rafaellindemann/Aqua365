@@ -9,10 +9,10 @@ body, html, #root{
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  
 
   color-scheme: light dark;
   color: var(--cor-5);
-  /* background-color: var(--cor-1); */
   background: rgb(144,224,239);
   background: linear-gradient(90deg, rgba(144,224,239,1) 0%, rgba(2,62,138,1) 100%);
 
@@ -20,14 +20,6 @@ body, html, #root{
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* --cor-1: #C7FFED;
-  --cor-2: #D8FFDB;
-  --cor-3: #008F8C;
-  --cor-4: #015958;
-  --cor-5: #023535; */
-
-
 
   --cor-5: #03045eff;
   --cor-4a: #023e8aff;
@@ -44,12 +36,11 @@ body, html, #root{
 
 a {
   font-weight: 500;
-  /* color: #646cff; */
   text-decoration: inherit;
 }
-a:hover {
+/* a:hover {
   color: #535bf2;
-}
+} */
 
 /* body {
   margin: 0;

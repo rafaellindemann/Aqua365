@@ -84,7 +84,7 @@ function Profile() {
   const confirmDeleteUser = () => {
     const userRelatorios = relatorios.filter(rel => rel.userID === loggedUser.id);
     if (userRelatorios.length > 0) {
-      alert("Não é possível excluir o usuário. Existem relatórios cadastrados com este ID.");
+      alert("Não é possível excluir o usuário. Exclua todos seus relatórios e tente novamente.");
       return;
     }
 

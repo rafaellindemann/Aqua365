@@ -17,10 +17,17 @@
     margin-bottom: 20px;
   }
   
-  .inputContainer {
-    position: relative;
-    margin-bottom: 20px;
+  .inputContainer{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cepContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .inputContainer input,
@@ -33,13 +40,14 @@
   }
   
   .inputContainer label,
-  .cepContainer label {
-    position: absolute;
-    top: -10px;
+  .cepContainer label{
     left: 10px;
-    background-color: var(--cor-2a);;
     padding: 0 5px;
-    color: #888;
+    color: var(--cor-5);
+  }
+
+  .cepLabel{
+    text-align: center;
   }
   
   .inputContainer p,
@@ -85,5 +93,9 @@
   input[type="number"], input[type="month"] {
     background-color: var(--cor-1);
     color: var(--cor-4);
+  }
+  
+  input[type="month"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
   }
   

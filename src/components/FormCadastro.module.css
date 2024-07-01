@@ -44,25 +44,6 @@ select {
   outline: none;
 }
 
-/* label {
-  position: absolute;
-  top: 50%;
-  left: 0.75rem;
-  transform: translateY(-50%);
-  background-color: var(--cor-1);
-  padding: 0 0.25rem;
-  transition: 0.2s;
-  pointer-events: none;
-  color: var(--cor-3);
-}
-
-input:focus + label,
-input:not(:placeholder-shown) + label {
-  top: 0;
-  transform: translateY(-100%);
-  font-size: 0.75rem;
-  color: var(--cor-4a);
-} */
 
 input[type="submit"],
 button[type="button"] {
@@ -93,11 +74,11 @@ button:hover {
   text-decoration: underline;
 }
 
-p {
+/* p {
   color: red;
   font-size: 0.9rem;
   margin: 0;
-}
+} */
 
 .cepContainer {
   display: flex;

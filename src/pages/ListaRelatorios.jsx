@@ -29,8 +29,8 @@ function ListaRelatorios() {
         ) : (
           userRelatorios.map((relatorio) => (
             <div key={relatorio.id} className={styles.card}>
-              <p className={styles.text}>Mês: {relatorio.mes}</p>
-              <p className={styles.text}>Consumo: {relatorio.volume}</p>
+              <h2 className={styles.text}>Mês: {relatorio.mes}</h2>
+              <h3 className={styles.text}>Consumo: {relatorio.volume}</h3>
               <button onClick={() => handleEdit(relatorio)}>Editar</button>
               <button onClick={() => handleDelete(relatorio.id)}>Deletar</button>
             </div>

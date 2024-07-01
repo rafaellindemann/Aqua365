@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { GlobalContext } from '../context/GlobalContext';
-import styles from './FormCadastro.module.css';
+import styleFormCadastro from './FormCadastro.module.css';
 
 function FormCadastro({ switchToLogin }) {
   const { register, handleSubmit, formState: { errors }, setValue, getValues } = useForm();
@@ -60,8 +60,8 @@ function FormCadastro({ switchToLogin }) {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.formWrapper}>
+    <div className={styleFormCadastro.container}>
+      <div className={styleFormCadastro.formWrapper}>
         <h1>Cadastro</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input type="text" placeholder="Nome" {...register("nome", { required: true })} />
@@ -87,7 +87,7 @@ function FormCadastro({ switchToLogin }) {
           <input type="password" placeholder="Senha" {...register("senha", { required: true })} />
           {errors.senha && <p>Senha é obrigatória</p>}
 
-          <div className={styles.cepContainer}>
+          <div className={styleFormCadastro.cepContainer}>
             <input type="text" placeholder="CEP" {...register("CEP", { required: true })} />
             <button type="button" onClick={buscarEndereco} disabled={cepLoading}>
               {cepLoading ? 'Buscando...' : 'Buscar CEP'}
@@ -113,7 +113,7 @@ function FormCadastro({ switchToLogin }) {
 
           <input type="submit" value="Cadastrar" />
         </form>
-        <p className={styles.switch} onClick={switchToLogin}>Já tem uma conta? Faça login</p>
+        <p className={styleFormCadastro.switch} onClick={switchToLogin}>Já tem uma conta? Faça login</p>
       </div>
     </div>
   );

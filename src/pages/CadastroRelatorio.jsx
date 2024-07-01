@@ -64,20 +64,21 @@ function CadastroRelatorio() {
         <h1>Cadastro de Relatório</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.inputContainer}>
-            <input type="month" {...register("mes", { required: true })} />
             <label>Mês</label>
+            <input type="month" {...register("mes", { required: true })} />
             {errors.mes && <p>Mês é obrigatório</p>}
           </div>
           <div className={styles.inputContainer}>
-            <input type="number" {...register("volume", { required: true })} />
             <label>Volume</label>
+            <input type="number" {...register("volume", { required: true })} />
             {errors.volume && <p>Volume é obrigatório</p>}
           </div>
           <div className={styles.inputContainer}>
-            <input type="text" {...register("descricao", { required: true })} />
             <label>Descrição</label>
+            <input type="text" {...register("descricao", { required: true })} />
             {errors.descricao && <p>Descrição é obrigatória</p>}
           </div>
+          <label className={styles.cepLabel}>CEP</label>
           <div className={styles.cepContainer}>
             <input type="text" {...register("CEP", { required: true })} />
             <button type="button" onClick={buscarEndereco} disabled={cepLoading}>
@@ -86,31 +87,31 @@ function CadastroRelatorio() {
             {errors.CEP && <p>CEP é obrigatório</p>}
           </div>
           <div className={styles.inputContainer}>
-            <input type="text" {...register("Logradouro", { required: true })} />
             <label>Logradouro</label>
+            <input type="text" {...register("Logradouro", { required: true })} />
             {errors.Logradouro && <p>Logradouro é obrigatório</p>}
           </div>
           <div className={styles.inputContainer}>
-            <input type="text" {...register("Complemento")} />
             <label>Complemento</label>
+            <input type="text" {...register("Complemento")} />
           </div>
           <div className={styles.inputContainer}>
-            <input type="text" {...register("Unidade")} />
             <label>Unidade</label>
+            <input type="text" {...register("Unidade")} />
           </div>
           <div className={styles.inputContainer}>
-            <input type="text" {...register("Bairro", { required: true })} />
             <label>Bairro</label>
+            <input type="text" {...register("Bairro", { required: true })} />
             {errors.Bairro && <p>Bairro é obrigatório</p>}
           </div>
           <div className={styles.inputContainer}>
-            <input type="text" {...register("Localidade", { required: true })} />
             <label>Localidade</label>
+            <input type="text" {...register("Localidade", { required: true })} />
             {errors.Localidade && <p>Localidade é obrigatória</p>}
           </div>
           <div className={styles.inputContainer}>
-            <input type="text" {...register("UF", { required: true })} />
             <label>UF</label>
+            <input type="text" {...register("UF", { required: true })} />
             {errors.UF && <p>UF é obrigatória</p>}
           </div>
           <input type="submit" value="Cadastrar Relatório" />
