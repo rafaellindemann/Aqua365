@@ -13,9 +13,9 @@
   
   .card {
     background-color: var(--cor-1);
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 30%;
     text-align: center;
   }
@@ -42,7 +42,7 @@
     background-color: var(--cor-1);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     max-width: 300px;
   }
   
@@ -52,6 +52,7 @@
   
   .chartContainer {
     margin-top: 40px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
   }
   
   .chartContainer h2 {
@@ -60,6 +61,11 @@
   
   .text{
     color: var(--cor-4a);
+  }
+  .cardText{
+    color: var(--cor-4a);
+    font-size: 3em;
+    font-weight: bolder;
   }
 
   .dicaText{
@@ -72,7 +78,7 @@
     margin-top: 20px;
     background-color: var(--cor-1a);
     border-radius: 10px;
-    /* padding: 5px; */
+    padding: 5px;
     border: 1px solid var(--cor-3a);
-    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }

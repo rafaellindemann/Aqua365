@@ -22,15 +22,15 @@ function Dashboard() {
       <div className={styles.cards}>
         <div className={styles.card}>
           <h3>Total de Usuários</h3>
-          <p className={styles.text}>{totalUsuarios}</p>
+          <p className={styles.cardText}>{totalUsuarios}</p>
         </div>
         <div className={styles.card}>
           <h3>Total de Relatórios</h3>
-          <p className={styles.text}>{totalRelatorios}</p>
+          <p className={styles.cardText}>{totalRelatorios}</p>
         </div>
         <div className={styles.card}>
           <h3>Seus Relatórios</h3>
-          <p className={styles.text}>{totalRelatoriosUsuario}</p>
+          <p className={styles.cardText}>{totalRelatoriosUsuario}</p>
         </div>
       </div>
         <h2 className={styles.subtitulo}>Seus Relatórios</h2>
